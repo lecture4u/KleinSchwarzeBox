@@ -6,7 +6,8 @@ Java Block-chain skeleton for lecture.
 또한 p2p모듈이 빠져 있습니다.
 
 같이 참여하셔서 코드 발전에 도움 주시기 바랍니다.
-우선은 ... 에 의견을 남겨 주시면 감사 드리겠습니다.
+우선은 https://github.com/lecture4u/KleinSchwarzeBox/issues
+에 의견을 남겨 주시면 감사 드리겠습니다.
 메일에 Jar 파일을 넣을 수 없어 이곳에 남겨 놓았으니
 다운 받아 사용하세요. 빠른 시간내에 코드도 정리해서
 git clone 받을 수 있도록 하겠습니다.
