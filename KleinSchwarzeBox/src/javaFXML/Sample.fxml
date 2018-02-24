@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXML.SampleController">
+   <children>
+      <ScrollPane fx:id="basicScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="883.0" prefWidth="941.0">
+        <content>
+          <AnchorPane fx:id="scrollAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="881.0" prefWidth="864.0">
+               <children>
+                  <TabPane prefHeight="883.0" prefWidth="941.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="security">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane animated="false" layoutX="35.0" layoutY="22.0" prefHeight="208.0" prefWidth="660.0" text="Hash ">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="15.0" layoutY="32.0" text="Data" />
+                                                <Label layoutX="15.0" layoutY="82.0" text="None" />
+                                                <TextField fx:id="dataField" layoutX="60.0" layoutY="27.0" prefHeight="27.0" prefWidth="290.0" />
+                                                <TextField fx:id="nonceField" layoutX="60.0" layoutY="77.0" prefHeight="27.0" prefWidth="200.0" />
+                                                <TextField fx:id="hashField" layoutX="60.0" layoutY="121.0" prefHeight="27.0" prefWidth="290.0" />
+                                                <Label layoutX="15.0" layoutY="126.0" text="Hash" />
+                                                <Button layoutX="360.0" layoutY="27.0" mnemonicParsing="false" onAction="#generateHash" text="Generate Hash" />
+                                                <Button layoutX="517.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="61.0" prefWidth="108.0" text="Sned Message" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" layoutX="35.0" layoutY="254.0" prefHeight="208.0" prefWidth="660.0" text="Public &amp; Private Key">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#publicEncryption" text="Encryption " />
+                                                <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#publicDecryption" text="Decryption" />
+                                                <TextField fx:id="publicEnField" layoutX="109.0" layoutY="39.0" prefHeight="27.0" prefWidth="218.0" />
+                                                <TextField fx:id="publicDeField" layoutX="109.0" layoutY="100.0" prefHeight="27.0" prefWidth="215.0" />
+                                                <Button layoutX="340.0" layoutY="40.0" mnemonicParsing="false" onAction="#privateEncryption" text="Encryption" />
+                                                <Button layoutX="340.0" layoutY="100.0" mnemonicParsing="false" onAction="#privateDecryption" text="Decryption" />
+                                                <TextField fx:id="privateEnField" layoutX="440.0" layoutY="40.0" prefHeight="27.0" prefWidth="211.0" />
+                                                <TextField fx:id="privateDeField" layoutX="440.0" layoutY="100.0" prefHeight="27.0" prefWidth="209.0" />
+                                                <Label fx:id="publicKeyLabel" layoutX="10.0" layoutY="15.0" text="Public" />
+                                                <Label fx:id="privateKeyLabel" layoutX="340.0" layoutY="15.0" text="Private" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" layoutX="35.0" layoutY="503.0" prefHeight="243.0" prefWidth="660.0" text="Signature Encryption and Decryption">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="16.0" layoutY="123.0" text="Signature Encryption" />
+                                                <Label layoutX="15.0" layoutY="14.0" text="Data Encryption" />
+                                                <Label layoutX="427.0" layoutY="64.0" text="Data hash" />
+                                                <Label layoutX="426.0" layoutY="123.0" text="Signature Decryption" />
+                                                <Button layoutX="238.0" layoutY="45.0" mnemonicParsing="false" onAction="#deAndHashing" text="Decryption and Hasing" />
+                                                <Button layoutX="275.0" layoutY="153.0" mnemonicParsing="false" onAction="#signatureDe" text="Decryption" />
+                                                <TextField fx:id="dataEnField" layoutX="15.0" layoutY="45.0" prefHeight="27.0" prefWidth="189.0" />
+                                                <TextField fx:id="dataHashEnField" layoutX="427.0" layoutY="81.0" prefHeight="27.0" prefWidth="191.0" />
+                                                <TextField fx:id="signatureEnField" layoutX="16.0" layoutY="153.0" prefHeight="27.0" prefWidth="185.0" />
+                                                <TextField fx:id="signatureDeField" layoutX="426.0" layoutY="153.0" prefHeight="27.0" prefWidth="193.0" />
+                                                <Label layoutX="427.0" layoutY="14.0" text="Data" />
+                                                <TextField fx:id="keydataField" layoutX="426.0" layoutY="32.0" prefHeight="27.0" prefWidth="191.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                      <Tab text="Transaction">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="770.0" prefWidth="727.0">
+                                 <children>
+                                    <ScrollPane layoutX="20.0" layoutY="44.0" prefHeight="750.0" prefWidth="630.0">
+                                      <content>
+                                        <AnchorPane fx:id="transectionPane" minHeight="0.0" minWidth="0.0" prefHeight="733.0" prefWidth="628.0" />
+                                      </content>
+                                    </ScrollPane>
+                                    <Label layoutX="20.0" layoutY="13.0" text="Transactions">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="526.0" layoutY="801.0" mnemonicParsing="false" onAction="#makehashTree" text="Make MerkleTree" />
+                                    <Button layoutX="532.0" layoutY="10.0" mnemonicParsing="false" onAction="#addTransactionToTransaction" text="Add Transaction" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Block">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane fx:id="merkleScrollPane" layoutX="21.0" layoutY="377.0" prefHeight="451.0" prefWidth="679.0">
+                                       <content>
+                                          <AnchorPane fx:id="mekleTreePane" prefHeight="447.0" prefWidth="677.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Label layoutX="27.0" layoutY="354.0" text="Merkle Tree">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="315.0" layoutY="327.0" mnemonicParsing="false" onAction="#rockmakleTree" text="Add to Block" />
+                                    <TitledPane fx:id="blcokPane" animated="false" layoutX="27.0" layoutY="14.0" prefHeight="293.0" prefWidth="672.0" text="Block Hash -">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GridPane layoutX="19.0" layoutY="75.0" prefHeight="98.0" prefWidth="635.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="233.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Head - Nonce(with consensus) :" />
+                                                      <TextField fx:id="noncefield" GridPane.columnIndex="1" />
+                                                      <Label text="Head -     Previous Block Hash :" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="priviousfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Head -          Merkle Tree Root :" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="merklerootfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <Button layoutX="146.0" layoutY="327.0" mnemonicParsing="false" onAction="#getPreviousBlockHash" text="Get previous hash" />
+                                    <Button layoutX="456.0" layoutY="327.0" mnemonicParsing="false" onAction="#getNonce" text="GetNonce" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Wallet">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="10.0" text="Wallet 1">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="270.0" text="Wallet 2">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="530.0" prefHeight="0.0" prefWidth="62.0" text="Wallet 3">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ScrollPane layoutX="20.0" layoutY="35.0" prefHeight="230.0" prefWidth="690.0">
+                                      <content>
+                                        <AnchorPane fx:id="walletPane1" minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="685.0" />
+                                      </content>
+                                    </ScrollPane>
+                                    <ScrollPane layoutX="20.0" layoutY="295.0" prefHeight="230.0" prefWidth="690.0">
+                                       <content>
+                                          <AnchorPane fx:id="walletPane2" minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="685.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane layoutX="19.0" layoutY="555.0" prefHeight="230.0" prefWidth="690.0">
+                                       <content>
+                                          <AnchorPane fx:id="walletPane3" minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="685.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Button layoutX="591.0" layoutY="5.0" mnemonicParsing="false" onAction="#addTransactionToWallet1" text="Add Transaction" />
+                                    <Button layoutX="591.0" layoutY="267.0" mnemonicParsing="false" onAction="#addTransactionToWallet2" text="Add Transaction" />
+                                    <Button layoutX="591.0" layoutY="527.0" mnemonicParsing="false" onAction="#addTransactionToWallet3" text="Add Transaction" />
+                                    <Button layoutX="571.0" layoutY="796.0" mnemonicParsing="false" onAction="#rockToChain" text="Rock to BlockChain" />
+                                    <Label layoutX="895.0" layoutY="12.0" text="Block" />
+                                    <ScrollPane layoutX="718.0" layoutY="35.0" prefHeight="749.0" prefWidth="211.0">
+                                      <content>
+                                        <AnchorPane fx:id="walletBlcokPane" minHeight="0.0" minWidth="0.0" prefHeight="744.0" prefWidth="209.0" />
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="BlockChain">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane fx:id="chainPane" animated="false" layoutX="28.0" layoutY="14.0" prefHeight="225.0" prefWidth="517.0" text="Block Chain -">
+                                       <content>
+                                          <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                                            <content>
+                                              <AnchorPane fx:id="blockchainPane" minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="515.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TableView fx:id="userTable" layoutX="562.0" layoutY="14.0" onMouseClicked="#clickItem" prefHeight="226.0" prefWidth="157.0">
+                                      <columns>
+                                        <TableColumn fx:id="userNameColumn" prefWidth="156.0" text="User List" />
+                                      </columns>
+                                    </TableView>
+                                    <TitledPane fx:id="blcokchainblockPane" animated="false" layoutX="28.0" layoutY="252.0" prefHeight="244.0" prefWidth="691.0" text="Block Hash -">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GridPane layoutX="19.0" layoutY="75.0" prefHeight="98.0" prefWidth="635.0">
+                                                   <children>
+                                                      <Label text="Head - Nonce(with consensus) :" />
+                                                      <TextField fx:id="blockchainblocknoncefield" GridPane.columnIndex="1" />
+                                                      <Label text="Head -     Previous Block Hash :" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="blockchainblocmerklerootfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Head -          Merkle Tree Root :" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="blockchainblocpriviousfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="233.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="352.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <Label fx:id="blockWalletLabel" layoutX="28.0" layoutY="503.0" text="Transactions">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="blockchainblockTransactionArea" layoutX="28.0" layoutY="530.0" prefHeight="305.0" prefWidth="691.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
