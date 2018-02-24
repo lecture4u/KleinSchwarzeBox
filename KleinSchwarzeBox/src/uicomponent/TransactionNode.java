@@ -3,7 +3,7 @@ package uicomponent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Rectangle;
+//import javafx.scene.shape.Rectangle;
 
 public class TransactionNode {
 	private Label name;
