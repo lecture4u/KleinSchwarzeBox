@@ -5,6 +5,8 @@ Java Block-chain skeleton for lecture.
 강의용으로 개발되어 보안 모듈이 약합니다.
 또한 p2p모듈이 빠져 있습니다.
 
+사용 메뉴얼은 여기서 받으실 수 있습니다. -[메뉴얼](https://github.com/lecture4u/KleinSchwarzeBox/blob/master/KieinScjwarzeBox_Manual.pptx).
+
 같이 참여하셔서 코드 발전에 도움 주시기 바랍니다.
 우선은 https://github.com/lecture4u/KleinSchwarzeBox/issues
 에 의견을 남겨 주시면 감사 드리겠습니다.
